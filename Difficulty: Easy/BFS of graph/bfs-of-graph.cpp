@@ -1,13 +1,12 @@
 class Solution {
   public:
     vector<int> bfs(vector<vector<int>> &adj) {
-        
         int n=adj.size();
         vector<int>res;
         vector<bool>vis(n,false);
         queue<int>q;
         q.push(0);
-        vis[0]=true;
+        vis[0] = true;
         while(!q.empty()){
             int node=q.front();
             q.pop();
@@ -18,10 +17,9 @@ class Solution {
                     q.push(neigh);
                     vis[neigh]=true;
                 }
-                
             }
-    
         }
-        return res;
+       return res;
+        
     }
 };
